@@ -1,2 +1,2 @@
 # NCDSmartContract
-Smart Contract desarrollado en la Blockcahin de NEAR protocol
+Smart Contract desarrollado en la Blockchain de NEAR protocol
