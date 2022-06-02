@@ -1,6 +1,6 @@
 # Rust Starter
 
-Esta es una plantilla que puedes usar como punto de inicio para tu proyecto.
+Esta plantilla es un fork de https://github.com/Learn-NEAR-Hispano/NCD-samples
 
 ## Contenido
 
