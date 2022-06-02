@@ -54,28 +54,26 @@ Get metadata:
     near view $ID ft_metadata
 
 
-Transfer Example
+Ejemplo de Transferencia de Token
 ---------------
 
-Let's set up an account to transfer some tokens to. These account will be a sub-account of the NEAR account you logged in with.
+Usaremos la cuenta do0k13.testnet para trasferir fondos.
 
-    near create-account bob.$ID --masterAccount $ID --initialBalance 1
+Se agrega la variable storage_deposit para la cuenta:
 
-Add storage deposit for Bob's account:
-
-    near call $ID storage_deposit '' --accountId bob.$ID --amount 0.00125
+    near call $ID storage_deposit '{"account_id": "do0k13.testnet", "registration_only": true }' --accountId do0k13.testnet --amount 0.00125
 
 
-Check balance of Bob's account, it should be `0` for now:
+Se valida el balance de la cuenta, actualmente debería ser cero:
 
-    near view $ID ft_balance_of '{"account_id": "'bob.$ID'"}'
+    near view $ID ft_balance_of '{"account_id": "'do0k13.testnet'"}'
 
-Transfer tokens to Bob from the contract that minted these fungible tokens, exactly 1 yoctoNEAR of deposit should be attached:
+Se transfieren tokens a la wallet desde el contrato original, se debe adjuntar exactamente 1 yoctoNEAR de depósito:
 
-    near call $ID ft_transfer '{"receiver_id": "'bob.$ID'", "amount": "19"}' --accountId $ID --amount 0.000000000000000000000001
+    near call $ID ft_transfer '{"receiver_id": "'do0k13.testnet'", "amount": "19"}' --accountId $ID --amount 0.000000000000000000000001
 
 
-Check the balance of Bob again with the command from before and it will now return `19`.
+Se valida nuevamente el balance y debería ser `19`.
 
 ## Testing
 
