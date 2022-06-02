@@ -1,5 +1,7 @@
 # LinkDrop contract
 
+Este repositorio es un Fork de: https://github.com/near/near-linkdrop
+
 LinkDrop contract allows any user to create a link that their friends can use to claim tokens even if they don't have an account yet.
 
 The way it works:
